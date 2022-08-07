@@ -1,0 +1,93 @@
+#container {
+    display: flex;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 93%;
+    gap: 32px;
+}
+
+#d2 {
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.option {
+    margin: 0;
+    padding: 8px 16px;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.option:hover, .option.active {
+    background-color: rgb(255, 230, 235);
+    color: #ed0331;
+    cursor: pointer;
+}
+
+#d3_btn {
+    padding: 6px 30px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 600; background-color: #f2fdff; border: none; color: #6e71d6;
+    border-radius: 5px;
+}
+
+#d3_btn:hover {
+    background-color: #CFE9EE;
+    cursor: pointer;
+}
+
+#d4_btn {
+    padding: 13px 16px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 600; border: 1px solid #ed0331; border-radius: 5px; color: #ed0331; background-color: white;
+}
+
+#d4_btn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 230, 235);
+}
+
+.dropdown {
+    border: 1px solid #6C6768;
+    color: #6C6768;
+    width: fit-content;
+    border-radius: 5px;
+    position:absolute;
+    top: 75px;
+    left: 353px;
+    display: none;
+}
+
+.dropdown i {
+    color: #ed0331;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.d_head {
+    line-height: 21px;
+    margin: 8px 16px;
+    font-weight: 600;
+}
+
+.courses {
+    margin-left: 16px;
+    padding: 0px 16px;
+    line-height: 10px;
+}
+
+.d_sHead {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.details {
+    font-size: 14px;
+}
+
+#d2:focus-within .dropdown,
+#d2:hover .dropdown {
+    display: block;
+}

@@ -1,0 +1,21 @@
+#container {
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 25px;
+    border: 1px solid black;
+    width: 500px;
+    margin: 10px;
+    cursor: grab;
+}
+
+.items.drag {
+    opacity: .5;
+    cursor: grabbing;
+}

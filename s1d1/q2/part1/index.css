@@ -1,0 +1,110 @@
+:root {
+    --arrow-w: 5px;
+    --color-tt: #343434;
+    --offs: 1px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#main {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tt {
+    position: relative;
+    background-color: #246caa;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tt:before {
+    visibility: hidden;
+    content: attr(title);
+    background-color: var(--color-tt);;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.tt:after {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: var(--arrow-w) solid transparent;
+}
+
+.tt.top:before {
+    bottom : calc(100% + var(--arrow-w) + var(--offs));
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tt.top:after {
+    bottom: calc(100% + var(--offs));
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-width: 0;
+    border-top-color: var(--color-tt);
+}
+
+.tt:hover:before,
+.tt:hover:after {
+    visibility: visible;
+}
+
+.tt.bottom:before {
+    top: calc(100% + var(--arrow-w) + var(--offs));
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tt.bottom:after {
+    top: calc(100% +var(--offs));
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-width: 0;
+    border-bottom-color: var(--color-tt);
+}
+
+.tt[d-p="left"]:before {
+    right: calc(100% + var(--arrow-w) + var(--offs));
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.tt[d-p="left"]:after {
+    right: calc(100% +var(--offs));
+    top: 50%;
+    transform: translateY(-50%);
+    border-right-width: 0;
+    border-left-color: var(--color-tt);
+}
+
+.tt.right:before {
+    left: calc(100% + var(--arrow-w) + var(--offs));
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.tt.right:after {
+    left: calc(100% +var(--offs));
+    top: 50%;
+    transform: translateY(-50%);
+    border-left-width: 0;
+    border-right-color: var(--color-tt);
+}
