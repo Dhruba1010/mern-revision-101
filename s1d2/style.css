@@ -22,11 +22,13 @@
 }
 
 
-.option:hover, .option.active {
+.option.active {
     background-color: rgb(255, 230, 235);
     color: #ed0331;
     cursor: pointer;
 }
+
+
 
 #d3_btn {
     padding: 6px 30px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 600; background-color: #f2fdff; border: none; color: #6e71d6;
@@ -86,6 +88,7 @@
 .details {
     font-size: 14px;
 }
+
 
 #d2:focus-within .dropdown,
 #d2:hover .dropdown {
