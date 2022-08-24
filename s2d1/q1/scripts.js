@@ -1,8 +1,18 @@
 
-const toggler = () => {
-    
+let theme = 'dark';
+
+let data = document.getElementById('data');
+data.innerText = theme;
+
+let toogler = (theme) => {
+    if(theme === 'dark'){
+        console.log(theme)
+    }else{
+        console.log(theme)
+    }
 }
 
-const toggle = toggler(1,2,3);
+// toogler();
 
-toggle();
+
+console.log(toogler());
